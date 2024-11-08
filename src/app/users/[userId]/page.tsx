@@ -23,7 +23,7 @@ export default async function UserPage({
   const { userId } = await params; // Используем await для params
 
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {
-    cache: 'no-store', // Обеспечиваем SSR при каждом запросе
+    next: { revalidate: 60 },
   });
 
   if (!res.ok) return <div>Ошибка при загрузке пользователя</div>;

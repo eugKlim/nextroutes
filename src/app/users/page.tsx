@@ -7,7 +7,7 @@ type User = {
 
 export default async function UsersPage() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users', {
-    cache: 'no-store',
+    next: { revalidate: 60 }, // обновлять каждые 60 секунд
   });
   const users: User[] = await res.json();
 
