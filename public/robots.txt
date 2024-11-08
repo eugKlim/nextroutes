@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nextroutes.vercel.app/
+
+# Sitemaps
+Sitemap: https://nextroutes.vercel.app/sitemap.xml
